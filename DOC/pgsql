@@ -38,3 +38,5 @@ Edit /var/lib/pgsql/data/pg_hba.conf file:
 	CREATE ROLE testuser WITH SUPERUSER LOGIN PASSWORD 'test';
 
 
+
+yum install python-psycopg python-psycopg2
