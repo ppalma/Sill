@@ -1,0 +1,40 @@
+== fedora 16 ==
+
+#yum install postgresql postgresql-server postgresql-contrib
+
+
+#postgresql-setup initdb
+
+
+
+
+Edit /var/lib/pgsql/data/postgresql.conf file:
+Set PostgreSQL server to listen all addresses and Change PostgreSQL port (default is 5432). Add/Uncomment/Edit following lines:
+
+	listen_addresses = '*'
+	port = 5432
+
+
+
+Edit /var/lib/pgsql/data/pg_hba.conf file:
+
+	host	all	all	127.0.0.1/8	md5
+
+
+
+#service postgresql start
+
+
+	Change to postgres user:
+	su postgres
+
+	Create test database (as postgres user):
+	createdb test
+
+	Login test database (as postgres user):
+	psql test
+
+	Create New “testuser” Role with Superuser and Password:
+	CREATE ROLE testuser WITH SUPERUSER LOGIN PASSWORD 'test';
+
+
