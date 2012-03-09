@@ -29,13 +29,13 @@ Edit /var/lib/pgsql/data/pg_hba.conf file:
 	su postgres
 
 	Create test database (as postgres user):
-	createdb test
+	createdb sill
 
 	Login test database (as postgres user):
-	psql test
+	psql sill
 
 	Create New “testuser” Role with Superuser and Password:
-	CREATE ROLE testuser WITH SUPERUSER LOGIN PASSWORD 'test';
+	CREATE ROLE magma WITH SUPERUSER LOGIN PASSWORD 'sngm180';
 
 
 
